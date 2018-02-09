@@ -57,7 +57,7 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
    attrs:{
     class:"forg",
     size:"10",
-    value:,
+    value:"",
    },
    children: [{
      name:'img',
