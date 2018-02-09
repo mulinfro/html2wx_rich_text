@@ -62,7 +62,7 @@ def parseAttrs(ss):
     attrs = {}
     for e in tmp:
         if len(e) == 1:
-            attrs[e[0].strip()] = ""
+            attrs[e[0].strip()] = '""'
         else:
             attrs[e[0].strip()] = e[1].strip()
     return attrs
