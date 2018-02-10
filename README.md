@@ -31,8 +31,8 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
 
 输出的微信小程序富文本格式如下
 ```
- {
-  node0:{
+ data: {
+  node0:[{
    name:'h1',
    attrs:{
     style:"font-family:verdana;",
@@ -41,8 +41,8 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
      type:'text',
      text:'一个标题'
     }]
-  },
-  node1:{
+  }],
+  node1:[{
    name:'p',
    attrs:{
     style:"font-family:arial;color:red;font-size:20px;",
@@ -51,8 +51,8 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
      type:'text',
      text:'一个段落。'
     }]
-  },
-  node2:{
+  }],
+  node2:[{
    name:'p',
    attrs:{
     class:"forg",
@@ -71,8 +71,8 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
      type:'text',
      text:'图片'
     }]
-  },
-  node3:{
+  }],
+  node3:[{
    name:'div',
    attrs:{
     class:"div-class score",
@@ -97,7 +97,7 @@ html2rich_text.py这个类就是为了完成上述转换任务，接口函数为
      },
      children: []
     }]
-  }
+  }]
  }
 ```
 

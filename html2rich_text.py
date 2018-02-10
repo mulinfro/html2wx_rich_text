@@ -135,9 +135,9 @@ def nodes2Json(nodes, deepth):
 def out2wx_rich_text(nodes, outFile = None):
     deepth = init_deepth
     outStr = ""
-    s1 = "%s{\n"%(SPACE*deepth)
+    s1 = "%sdata: {\n"%(SPACE*deepth)
     nodes_str = nodes2Json(nodes, deepth+1)
-    nodes_str = [(deepth+1)*SPACE + "node%d:"%i + nodes_str[i] for i in range(len(nodes_str))]
+    nodes_str = [(deepth+1)*SPACE + "node%d:["%i + nodes_str[i] + "]" for i in range(len(nodes_str))]
     s2 = ",\n".join(nodes_str)
     s3 = "\n%s}"%(deepth*SPACE)
     ss = s1 + s2 + s3
@@ -163,14 +163,18 @@ text = """
 <html>
 <head> 
 <meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
+<title>教程(runoob.com)</title> 
 </head>
 <body>
 <h1 style="font-family:verdana;">一个标题</h1>
 <p style="font-family:arial;color:red;font-size:20px;">一个段落。</p>
-<img class="logo" src="img/logo.png" />
+<p class="forg" size="10" value><img class="logo" src="img/logo.png" />  图片</p>
+<div class="div-class score"> 
+<div> <p> example </p> </div>
+<br/>
+</div>
 </body>
 </html>
 """
 
-print(parseHtml(text))
+print(parseHtml(text, "D://tmp.txt"))
